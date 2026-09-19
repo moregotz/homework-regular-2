@@ -1,0 +1,42 @@
+{
+  "name": "homework-regular-2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/moregotz/homework-regular-2#readme",
+  "bugs": {
+    "url": "https://github.com/moregotz/homework-regular-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moregotz/homework-regular-2.git"
+  },
+  "license": "ISC",
+  "author": "moregotz",
+  "type": "commonjs",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "server": "webpack serve --mode development",
+    "compilation": "babel src -d dist -w",
+    "build": "webpack --mode production",
+    "lint": "eslint src",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/cli": "^8.0.6",
+    "@babel/core": "^8.0.6",
+    "@babel/preset-env": "^8.0.6",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.8",
+    "jest": "^30.5.2",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
+  }
+}
