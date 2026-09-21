@@ -19,3 +19,9 @@ test('tel_3', () => {
     const tool = new TelephoneTool();
     expect(() => tool.cleaner(telephoneNumber)).toThrow('Неправильный формат номера телефона');
 });
+
+test('tel_4', () => {
+    const telephoneNumber = '8(800)888-28-28';
+    const tool = new TelephoneTool();
+    expect(tool.cleaner(telephoneNumber)).toBe('+78008882828');
+});
