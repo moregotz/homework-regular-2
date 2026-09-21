@@ -25,3 +25,21 @@ test('tel_4', () => {
     const tool = new TelephoneTool();
     expect(tool.cleaner(telephoneNumber)).toBe('+78008882828');
 });
+
+test('tel_5', () => {
+    const telephoneNumber = null;
+    const tool = new TelephoneTool();
+    expect(() => tool.cleaner(telephoneNumber)).toThrow('Введите номер телефона');
+});
+
+test('tel_6', () => {
+    const telephoneNumber = '+7(980)345-67-89';
+    const tool = new TelephoneTool();
+    expect(tool.cleaner(telephoneNumber)).toBe('+79803456789');
+});
+
+test('tel_7 ', () => {
+    const telephoneNumber = '491234567890';
+    const tool = new TelephoneTool();
+    expect(tool.cleaner(telephoneNumber)).toBe('+491234567890');
+});
